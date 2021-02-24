@@ -5,9 +5,7 @@ Easily integrate [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager)
 [![GitHub license](https://img.shields.io/github/license/mll-lab/laravel-graphql-voyager.svg)](https://github.com/mll-lab/laravel-graphql-voyager/blob/master/LICENSE)
 [![Packagist](https://img.shields.io/packagist/v/mll-lab/laravel-graphql-voyager.svg)](https://packagist.org/packages/mll-lab/laravel-graphql-voyager)
 [![Packagist](https://img.shields.io/packagist/dt/mll-lab/laravel-graphql-voyager.svg)](https://packagist.org/packages/mll-lab/laravel-graphql-voyager)
-
-# TODO FIX
-[![StyleCI](https://github.styleci.io/repos/137498251/shield?branch=master)](https://github.styleci.io/repos/137498251)
+[![StyleCI](https://github.styleci.io/repos/341878848/shield?branch=master)](https://github.styleci.io/repos/341878848)
 
 [![voyager demo](https://github.com/APIs-guru/graphql-voyager/raw/master/docs/demo-gif.gif)](https://apis.guru/graphql-voyager/)
 
