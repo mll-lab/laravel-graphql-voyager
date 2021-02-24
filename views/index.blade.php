@@ -35,14 +35,14 @@
 
 <div id="voyager">Loading...</div>
 <script type="text/javascript">
-    const url = <?php $endpoint = config('graphql-voyager.endpoint');
-                      echo is_string($endpoint)
-                          ? "'" . url($endpoint) . "'"
-                          : 'null'; ?>
+    const endpoint = <?php $endpoint = config('graphql-voyager.endpoint');
+    echo is_string($endpoint)
+        ? "'" . $endpoint . "'"
+        : 'null'; ?>
 
-    const introspectionProvider = url
+    const introspectionProvider = endpoint
         ? function introspectionProvider(introspectionQuery) {
-            return fetch('{{url(config('graphql-voyager.endpoint'))}}', {
+            return fetch(endpoint, {
                     method: 'post',
                     headers: {
                         Accept: 'application/json',
