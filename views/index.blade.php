@@ -36,9 +36,9 @@
 <div id="voyager">Loading...</div>
 <script type="text/javascript">
     const url = <?php $endpoint = config('graphql-voyager.endpoint');
-                      is_string($endpoint)
-                          ? echo "'" . url($endpoint) . "'"
-                          : echo 'null'; ?>
+                      echo is_string($endpoint)
+                          ? "'" . url($endpoint) . "'"
+                          : 'null'; ?>
 
     const introspectionProvider = url
         ? function introspectionProvider(introspectionQuery) {
