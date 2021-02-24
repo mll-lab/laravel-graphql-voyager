@@ -37,24 +37,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Subscription endpoint
-    |--------------------------------------------------------------------------
-    |
-    | The default subscription endpoint Voyager UI uses to connect to.
-    | Tries to connect to the `endpoint` value if `null` as ws://{{endpoint}}
-    |
-    | Example: `ws://your-endpoint` or `wss://your-endpoint`
-    |
-    */
-
-    'subscriptionEndpoint' => env('GRAPHQL_VOYAGER_SUBSCRIPTION_ENDPOINT', null),
-
-    /*
-    |--------------------------------------------------------------------------
     | Control Voyager availability
     |--------------------------------------------------------------------------
     |
-    | Control if the voyager is accessible at all.
+    | Control if GraphQL Voyager is accessible at all.
     | This allows you to disable it in certain environments,
     | for example you might not want it active in production.
     |
