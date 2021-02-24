@@ -11,7 +11,7 @@ use function Safe\realpath;
 
 class GraphQLVoyagerServiceProvider extends ServiceProvider
 {
-    const CONFIG_PATH = __DIR__ . '/graphql-voyager.php';
+    const CONFIG_PATH = __DIR__.'/graphql-voyager.php';
     const VIEW_PATH = __DIR__.'/../views';
 
     public function boot(ConfigRepository $config): void
