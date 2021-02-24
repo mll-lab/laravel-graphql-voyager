@@ -2,10 +2,13 @@
 
 Easily integrate [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) into your Laravel projects.
 
+[![Continuous Integration](https://github.com/mll-lab/laravel-graphql-voyager/workflows/Continuous%20Integration/badge.svg)](https://github.com/mll-lab/laravel-graphql-voyager/actions)
+[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
+[![StyleCI](https://github.styleci.io/repos/341878848/shield?branch=master)](https://github.styleci.io/repos/341878848)
+
 [![GitHub license](https://img.shields.io/github/license/mll-lab/laravel-graphql-voyager.svg)](https://github.com/mll-lab/laravel-graphql-voyager/blob/master/LICENSE)
 [![Packagist](https://img.shields.io/packagist/v/mll-lab/laravel-graphql-voyager.svg)](https://packagist.org/packages/mll-lab/laravel-graphql-voyager)
 [![Packagist](https://img.shields.io/packagist/dt/mll-lab/laravel-graphql-voyager.svg)](https://packagist.org/packages/mll-lab/laravel-graphql-voyager)
-[![StyleCI](https://github.styleci.io/repos/341878848/shield?branch=master)](https://github.styleci.io/repos/341878848)
 
 [![voyager demo](https://github.com/APIs-guru/graphql-voyager/raw/master/docs/demo-gif.gif)](https://apis.guru/graphql-voyager/)
 
