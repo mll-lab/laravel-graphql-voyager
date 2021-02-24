@@ -15,7 +15,7 @@ class DownloadAssetsCommand extends Command
     const REACT_PATH_CDN = '//cdn.jsdelivr.net/npm/react@16/umd/react.production.min.js';
 
     const REACT_DOM_PATH_LOCAL = 'vendor/graphql-voyager/react-dom.js';
-    const REACT_DOM_PATH_CDN = '//cdn.jsdelivr.net/npm/react@16/umd/react-dom.production.min.js';
+    const REACT_DOM_PATH_CDN = '//cdn.jsdelivr.net/npm/react-dom@16/umd/react-dom.production.min.js';
 
     const JS_PATH_LOCAL = 'vendor/graphql-voyager/voyager.js';
     const JS_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.min.js';
