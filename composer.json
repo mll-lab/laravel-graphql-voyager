@@ -1,0 +1,47 @@
+{
+  "name": "mll-lab/laravel-graphql-voyager",
+  "description": "Easily integrate GraphQL Voyager into your Laravel project",
+  "keywords": [
+    "laravel",
+    "graphql",
+    "graphql-voyager"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Benedikt Franke",
+      "email": "benedikt@franke.tech"
+    }
+  ],
+  "require": {
+    "php": "^7.1 || ^8",
+    "illuminate/console": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8",
+    "illuminate/contracts": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8",
+    "illuminate/support": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8",
+    "thecodingmachine/safe": "^1"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2",
+    "laravel/lumen-framework": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8",
+    "orchestra/testbench": "3.6.* || 3.7.* || 3.8.* || 3.9.* || ^4 || ^5 || ^6",
+    "nunomaduro/larastan": "^0.7",
+    "thecodingmachine/phpstan-safe-rule": "^1"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MLL\\GraphQLVoyager\\GraphQLVoyagerServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "MLL\\GraphQLVoyager\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
