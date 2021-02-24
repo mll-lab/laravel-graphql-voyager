@@ -20,6 +20,9 @@ class DownloadAssetsCommand extends Command
     const JS_PATH_LOCAL = 'vendor/graphql-voyager/voyager.js';
     const JS_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.min.js';
 
+    const WORKER_PATH_LOCAL = 'vendor/graphql-voyager/voyager.worker.js';
+    const WORKER_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.worker.js';
+
     const CSS_PATH_LOCAL = 'vendor/graphql-voyager/voyager.css';
     const CSS_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.css';
 
@@ -43,6 +46,10 @@ class DownloadAssetsCommand extends Command
         $this->fileForceContents(
             self::publicPath(self::JS_PATH_LOCAL),
             file_get_contents('https:'.self::JS_PATH_CDN)
+        );
+        $this->fileForceContents(
+            self::publicPath(self::WORKER_PATH_LOCAL),
+            file_get_contents('https:'.self::WORKER_PATH_CDN)
         );
         $this->fileForceContents(
             self::publicPath(self::CSS_PATH_LOCAL),
