@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace MLL\GraphQLVoyager;
 
@@ -11,8 +9,8 @@ use function Safe\realpath;
 
 class GraphQLVoyagerServiceProvider extends ServiceProvider
 {
-    const CONFIG_PATH = __DIR__.'/graphql-voyager.php';
-    const VIEW_PATH = __DIR__.'/../views';
+    public const CONFIG_PATH = __DIR__ . '/graphql-voyager.php';
+    public const VIEW_PATH = __DIR__ . '/../views';
 
     public function boot(ConfigRepository $config): void
     {
@@ -26,11 +24,9 @@ class GraphQLVoyagerServiceProvider extends ServiceProvider
             self::VIEW_PATH => $this->resourcePath('views/vendor/graphql-voyager'),
         ], 'graphql-voyager-view');
 
-        if (! $config->get('graphql-voyager.enabled', true)) {
-            return;
+        if ($config->get('graphql-voyager.enabled', true)) {
+            $this->loadRoutesFrom(__DIR__ . '/routes.php');
         }
-
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
     }
 
     protected function loadRoutesFrom($path): void
@@ -57,11 +53,11 @@ class GraphQLVoyagerServiceProvider extends ServiceProvider
 
     protected function configPath(string $path): string
     {
-        return $this->app->basePath('config/'.$path);
+        return $this->app->basePath('config/' . $path);
     }
 
     protected function resourcePath(string $path): string
     {
-        return $this->app->basePath('resources/'.$path);
+        return $this->app->basePath('resources/' . $path);
     }
 }

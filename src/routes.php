@@ -1,12 +1,29 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
+/** @var ConfigRepository $config */
 
-/** @var \Illuminate\Contracts\Config\Repository $config */
-$config = app('config');
+use Illuminate\Contracts\Config\Repository as ConfigRepository;
 
-if ($routeConfig = $config->get('graphql-voyager.route')) {
-    /** @var \Illuminate\Contracts\Routing\Registrar|\Laravel\Lumen\Routing\Router $router */
+$config = app(ConfigRepository::class);
+assert($config instanceof ConfigRepository);
+
+$routeConfig = $config->get('graphql-voyager.route');
+if (is_array($routeConfig)) {
+    /**
+     * @var array{
+     *   name?: string|null,
+     *   middleware?: array<string>|null,
+     *   prefix?: string|null,
+     *   domain?: string|null,
+     *   uri?: string|null,
+     * } $routeConfig
+     */
+
+    /**
+     * Not using assert() since only one of those classes is actually present at runtime.
+     *
+     * @var \Illuminate\Contracts\Routing\Registrar|\Laravel\Lumen\Routing\Router $router
+     */
     $router = app('router');
 
     $actions = [

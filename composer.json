@@ -1,12 +1,12 @@
 {
   "name": "mll-lab/laravel-graphql-voyager",
   "description": "Easily integrate GraphQL Voyager into your Laravel project",
+  "license": "MIT",
   "keywords": [
     "laravel",
     "graphql",
     "graphql-voyager"
   ],
-  "license": "MIT",
   "authors": [
     {
       "name": "Benedikt Franke",
@@ -14,20 +14,31 @@
     }
   ],
   "require": {
-    "php": "^7.1 || ^8",
-    "illuminate/console": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8",
-    "illuminate/contracts": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8",
-    "illuminate/support": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8",
-    "thecodingmachine/safe": "^1"
+    "php": "^7.4 || ^8",
+    "illuminate/console": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8 || ^9",
+    "illuminate/contracts": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8 || ^9",
+    "illuminate/support": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8 || ^9",
+    "thecodingmachine/safe": "^1 || ^1"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2",
-    "laravel/lumen-framework": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8",
-    "orchestra/testbench": "3.6.* || 3.7.* || 3.8.* || 3.9.* || ^4 || ^5 || ^6",
-    "nunomaduro/larastan": "^0.7",
+    "laravel/lumen-framework": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6 || ^7 || ^8 || ^9",
+    "mll-lab/php-cs-fixer-config": "^4.4.1",
+    "nunomaduro/larastan": "^0.7 || ^1",
+    "orchestra/testbench": "3.6.* || 3.7.* || 3.8.* || 3.9.* || ^4 || ^5 || ^6 || ^7",
     "thecodingmachine/phpstan-safe-rule": "^1"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "MLL\\GraphQLVoyager\\": "src/"
+    }
+  },
   "config": {
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true
+    },
     "sort-packages": true
   },
   "extra": {
@@ -36,12 +47,5 @@
         "MLL\\GraphQLVoyager\\GraphQLVoyagerServiceProvider"
       ]
     }
-  },
-  "autoload": {
-    "psr-4": {
-      "MLL\\GraphQLVoyager\\": "src/"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  }
 }
