@@ -63,7 +63,7 @@ Check https://github.com/APIs-guru/graphql-voyager#properties for the allowed co
   }
 
   // Render <Voyager />
-  GraphQLVoyager.init(document.getElementById('voyager'), {
+  GraphQLVoyager.init(document.getElementById("voyager"), {
     introspection: introspectionProvider,
   });
 </script>
