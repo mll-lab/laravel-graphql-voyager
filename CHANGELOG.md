@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Drop support for PHP 7.3 and lower
-- Drop support for Laravel 5.6 and lower
+- Drop support for Laravel 7 and lower
 
 ## 1.0.2
 

@@ -16,8 +16,6 @@ jobs:
           - 7.4
           - 8.0
         laravel-version:
-          - ^6
-          - ^7
           - ^8
           - ^9
         exclude:
