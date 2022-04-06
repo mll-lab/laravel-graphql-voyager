@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace MLL\GraphQLVoyager;
 
@@ -11,23 +9,23 @@ use function Safe\mkdir;
 
 class DownloadAssetsCommand extends Command
 {
-    const REACT_PATH_LOCAL = 'vendor/graphql-voyager/react.js';
-    const REACT_PATH_CDN = '//cdn.jsdelivr.net/npm/react@16/umd/react.production.min.js';
+    public const REACT_PATH_LOCAL = 'vendor/graphql-voyager/react.js';
+    public const REACT_PATH_CDN = '//cdn.jsdelivr.net/npm/react@16/umd/react.production.min.js';
 
-    const REACT_DOM_PATH_LOCAL = 'vendor/graphql-voyager/react-dom.js';
-    const REACT_DOM_PATH_CDN = '//cdn.jsdelivr.net/npm/react-dom@16/umd/react-dom.production.min.js';
+    public const REACT_DOM_PATH_LOCAL = 'vendor/graphql-voyager/react-dom.js';
+    public const REACT_DOM_PATH_CDN = '//cdn.jsdelivr.net/npm/react-dom@16/umd/react-dom.production.min.js';
 
-    const JS_PATH_LOCAL = 'vendor/graphql-voyager/voyager.js';
-    const JS_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.min.js';
+    public const JS_PATH_LOCAL = 'vendor/graphql-voyager/voyager.js';
+    public const JS_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.min.js';
 
-    const WORKER_PATH_LOCAL = 'vendor/graphql-voyager/voyager.worker.js';
-    const WORKER_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.worker.js';
+    public const WORKER_PATH_LOCAL = 'vendor/graphql-voyager/voyager.worker.js';
+    public const WORKER_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.worker.js';
 
-    const CSS_PATH_LOCAL = 'vendor/graphql-voyager/voyager.css';
-    const CSS_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.css';
+    public const CSS_PATH_LOCAL = 'vendor/graphql-voyager/voyager.css';
+    public const CSS_PATH_CDN = '//cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.css';
 
-    const FAVICON_PATH_LOCAL = 'vendor/graphql-voyager/favicon.png';
-    const FAVICON_PATH_CDN = '//apis.guru/graphql-voyager/icons/favicon-32x32.png';
+    public const FAVICON_PATH_LOCAL = 'vendor/graphql-voyager/favicon.png';
+    public const FAVICON_PATH_CDN = '//apis.guru/graphql-voyager/icons/favicon-32x32.png';
 
     protected $signature = 'graphql-voyager:download-assets';
 
@@ -37,27 +35,27 @@ class DownloadAssetsCommand extends Command
     {
         $this->fileForceContents(
             self::publicPath(self::REACT_DOM_PATH_LOCAL),
-            file_get_contents('https:'.self::REACT_DOM_PATH_CDN)
+            file_get_contents('https:' . self::REACT_DOM_PATH_CDN)
         );
         $this->fileForceContents(
             self::publicPath(self::REACT_PATH_LOCAL),
-            file_get_contents('https:'.self::REACT_PATH_CDN)
+            file_get_contents('https:' . self::REACT_PATH_CDN)
         );
         $this->fileForceContents(
             self::publicPath(self::JS_PATH_LOCAL),
-            file_get_contents('https:'.self::JS_PATH_CDN)
+            file_get_contents('https:' . self::JS_PATH_CDN)
         );
         $this->fileForceContents(
             self::publicPath(self::WORKER_PATH_LOCAL),
-            file_get_contents('https:'.self::WORKER_PATH_CDN)
+            file_get_contents('https:' . self::WORKER_PATH_CDN)
         );
         $this->fileForceContents(
             self::publicPath(self::CSS_PATH_LOCAL),
-            file_get_contents('https:'.self::CSS_PATH_CDN)
+            file_get_contents('https:' . self::CSS_PATH_CDN)
         );
         $this->fileForceContents(
             self::publicPath(self::FAVICON_PATH_LOCAL),
-            file_get_contents('https:'.self::FAVICON_PATH_CDN)
+            file_get_contents('https:' . self::FAVICON_PATH_CDN)
         );
     }
 
@@ -114,6 +112,6 @@ class DownloadAssetsCommand extends Command
 
     protected static function publicPath(string $path): string
     {
-        return app()->basePath('public/'.$path);
+        return app()->basePath('public/' . $path);
     }
 }

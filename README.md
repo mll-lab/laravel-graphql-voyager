@@ -4,13 +4,12 @@ Easily integrate [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager)
 
 [![Continuous Integration](https://github.com/mll-lab/laravel-graphql-voyager/workflows/Continuous%20Integration/badge.svg)](https://github.com/mll-lab/laravel-graphql-voyager/actions)
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
-[![StyleCI](https://github.styleci.io/repos/341878848/shield?branch=master)](https://github.styleci.io/repos/341878848)
 
 [![GitHub license](https://img.shields.io/github/license/mll-lab/laravel-graphql-voyager.svg)](https://github.com/mll-lab/laravel-graphql-voyager/blob/master/LICENSE)
 [![Packagist](https://img.shields.io/packagist/v/mll-lab/laravel-graphql-voyager.svg)](https://packagist.org/packages/mll-lab/laravel-graphql-voyager)
 [![Packagist](https://img.shields.io/packagist/dt/mll-lab/laravel-graphql-voyager.svg)](https://packagist.org/packages/mll-lab/laravel-graphql-voyager)
 
-[![voyager demo](https://github.com/APIs-guru/graphql-voyager/raw/master/docs/demo-gif.gif)](https://apis.guru/graphql-voyager/)
+[![voyager demo](https://github.com/APIs-guru/graphql-voyager/raw/master/docs/demo-gif.gif)](https://apis.guru/graphql-voyager)
 
 > **Please note**: This is not a GraphQL Server implementation, only a UI for exploring your schema.
 > For the server component we recommend [nuwave/lighthouse](https://github.com/nuwave/lighthouse).
@@ -64,7 +63,7 @@ Check https://github.com/APIs-guru/graphql-voyager#properties for the allowed co
   }
 
   // Render <Voyager />
-  GraphQLVoyager.init(document.getElementById('voyager'), {
+  GraphQLVoyager.init(document.getElementById("voyager"), {
     introspection: introspectionProvider,
   });
 </script>

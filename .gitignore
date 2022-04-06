@@ -1,6 +1,9 @@
-### Composer
-vendor
+# Composer
 composer.lock
+vendor
 
-### PhpStorm
-.idea/
+# PhpStorm
+.idea
+
+# Generated files
+.php-cs-fixer.cache

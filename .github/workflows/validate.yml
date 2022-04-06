@@ -1,0 +1,35 @@
+name: "Validate"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  static-code-analysis:
+    name: Static Code Analysis
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version:
+          - 7.4
+          - 8.0
+        laravel-version:
+          - ^8
+          - ^9
+        exclude:
+          - php-version: 7.4
+            laravel-version: ^9
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          coverage: none
+          php-version: ${{ matrix.php-version }}
+
+      - run: composer require illuminate/contracts:${{ matrix.laravel-version }} --no-interaction --prefer-dist --no-interaction
+
+      - run: vendor/bin/phpstan
