@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## v2.0.0
+
 ### Added
 
 - Support Laravel 9
@@ -16,19 +18,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Drop support for PHP 7.3 and lower
 - Drop support for Laravel 7 and lower
 
-## 1.0.2
+## v1.0.2
 
 ### Fixed
 
 - Do not wrap endpoint in `url()` unnecessarily
 
-## 1.0.1
+## v1.0.1
 
 ### Fixed
 
 - Fix syntax error in view
 
-## 1.0.0
+## v1.0.0
 
 ### Added
 
