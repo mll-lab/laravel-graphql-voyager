@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## v2.0.1
+
+### Fixed
+
+- Fixed the version requirement for `thecodingmachine/safe` https://github.com/mll-lab/laravel-graphql-voyager/pull/3
+
 ## v2.0.0
 
 ### Added
