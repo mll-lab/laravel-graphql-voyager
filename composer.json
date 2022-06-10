@@ -18,7 +18,7 @@
     "illuminate/console": "^8 || ^9",
     "illuminate/contracts": "^8 || ^9",
     "illuminate/support": "^8 || ^9",
-    "thecodingmachine/safe": "^1 || ^1"
+    "thecodingmachine/safe": "^1 || ^2"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2",
