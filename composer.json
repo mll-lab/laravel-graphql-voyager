@@ -15,17 +15,17 @@
   ],
   "require": {
     "php": "^7.4 || ^8",
-    "illuminate/console": "^8 || ^9",
-    "illuminate/contracts": "^8 || ^9",
-    "illuminate/support": "^8 || ^9",
-    "thecodingmachine/safe": "^1 || ^1"
+    "illuminate/console": "^8 || ^9 || ^10",
+    "illuminate/contracts": "^8 || ^9 || ^10",
+    "illuminate/support": "^8 || ^9 || ^10",
+    "thecodingmachine/safe": "^1 || ^2"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2",
-    "laravel/lumen-framework": "^8 || ^9",
-    "mll-lab/php-cs-fixer-config": "^4.4.1",
-    "nunomaduro/larastan": "^0.7 || ^1",
-    "orchestra/testbench": "^6 || ^7",
+    "laravel/lumen-framework": "^8 || ^9 || ^10",
+    "mll-lab/php-cs-fixer-config": "^5",
+    "nunomaduro/larastan": "^0.7 || ^1 || ^2",
+    "orchestra/testbench": "^6 || ^7 || ^8",
     "thecodingmachine/phpstan-safe-rule": "^1"
   },
   "minimum-stability": "dev",
