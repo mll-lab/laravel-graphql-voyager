@@ -5,6 +5,7 @@ namespace MLL\GraphQLVoyager;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
+
 use function Safe\realpath;
 
 class GraphQLVoyagerServiceProvider extends ServiceProvider
