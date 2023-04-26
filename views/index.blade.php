@@ -41,27 +41,25 @@
         : 'null'; ?>
 
     const introspectionProvider = endpoint
-        ? function introspectionProvider(introspectionQuery) {
-            return fetch(endpoint, {
-                    method: 'post',
-                    headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ query: introspectionQuery }),
-                    credentials: 'include',
-                })
-                .then(function (response) {
-                    return response.text();
-                })
-                .then(function (responseBody) {
-                    try {
-                        return JSON.parse(responseBody);
-                    } catch (error) {
-                        return responseBody;
-                    }
-                });
-        }
+        ? fetch(endpoint, {
+                method: 'post',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query: GraphQLVoyager.voyagerIntrospectionQuery }),
+                credentials: 'include',
+            })
+            .then(function (response) {
+                return response.text();
+            })
+            .then(function (responseBody) {
+                try {
+                    return JSON.parse(responseBody);
+                } catch (error) {
+                    return responseBody;
+                }
+            })
         : undefined;
 
     GraphQLVoyager.init(document.getElementById('voyager'), {
