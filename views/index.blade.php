@@ -36,9 +36,9 @@
 <div id="voyager">Loading...</div>
 <script type="text/javascript">
     const endpoint = <?php $endpoint = config('graphql-voyager.endpoint');
-        echo is_string($endpoint)
-            ? "'{$endpoint}'"
-            : 'null'; ?>
+    echo is_string($endpoint)
+        ? "'{$endpoint}'"
+        : 'null'; ?>
 
     GraphQLVoyager.init(document.getElementById('voyager'), {
         introspection: endpoint
