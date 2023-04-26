@@ -2,7 +2,7 @@
 
 Easily integrate [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) into your Laravel projects.
 
-[![Continuous Integration](https://github.com/mll-lab/laravel-graphql-voyager/workflows/Continuous%20Integration/badge.svg)](https://github.com/mll-lab/laravel-graphql-voyager/actions)
+[![Continuous Integration](https://github.com/mll-lab/laravel-graphql-voyager/workflows/validate/badge.svg)](https://github.com/mll-lab/laravel-graphql-voyager/actions)
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
 
 [![GitHub license](https://img.shields.io/github/license/mll-lab/laravel-graphql-voyager.svg)](https://github.com/mll-lab/laravel-graphql-voyager/blob/master/LICENSE)
