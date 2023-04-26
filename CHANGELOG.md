@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## v2.1.1
+
+### Fixed
+
+- Use `voyagerIntrospectionQuery` over `introspection` as a function
+
 ## v2.1.0
 
 ### Added
