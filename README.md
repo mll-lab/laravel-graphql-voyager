@@ -52,21 +52,13 @@ You can use that for all kinds of customization.
 
 ### Change settings of the GraphQL Voyager instance
 
-Check https://github.com/APIs-guru/graphql-voyager#properties for the allowed config options, for example:
+Check https://github.com/APIs-guru/graphql-voyager#properties for the allowed config options.
+You may change them in the published view where `GraphQLVoyager.init()` is called, for example:
 
-```html
-<div id="voyager">Loading...</div>
-<script>
-  function introspectionProvider(introspectionQuery) {
-    // ... do a call to server using introspectionQuery provided
-    // or just return pre-fetched introspection
-  }
-
-  // Render <Voyager />
-  GraphQLVoyager.init(document.getElementById("voyager"), {
-    introspection: introspectionProvider,
-  });
-</script>
+```diff
+    GraphQLVoyager.init(document.getElementById('voyager'), {
++       someOption: 'some-value',
+    });
 ```
 
 ## Local assets

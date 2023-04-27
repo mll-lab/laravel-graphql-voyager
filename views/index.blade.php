@@ -52,6 +52,7 @@
                 credentials: 'include',
             }).then((response) => response.json())
             : undefined,
+        allowToChangeSchema: true,
     });
 </script>
 
