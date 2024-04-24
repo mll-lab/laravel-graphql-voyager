@@ -10,6 +10,7 @@ setup: vendor ## Setup the local environment
 
 .PHONY: fix
 fix: ## Fix code style
+	composer normalize
 	vendor/bin/php-cs-fixer fix
 
 .PHONY: stan
