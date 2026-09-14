@@ -1,53 +1,53 @@
 {
-  "name": "mll-lab/laravel-graphql-voyager",
-  "description": "Easily integrate GraphQL Voyager into your Laravel project",
-  "license": "MIT",
-  "keywords": [
-    "laravel",
-    "graphql",
-    "graphql-voyager"
-  ],
-  "authors": [
-    {
-      "name": "Benedikt Franke",
-      "email": "benedikt@franke.tech"
-    }
-  ],
-  "require": {
-    "php": "^7.4 || ^8",
-    "illuminate/console": "^8 || ^9 || ^10 || ^11",
-    "illuminate/contracts": "^8 || ^9 || ^10 || ^11",
-    "illuminate/support": "^8 || ^9 || ^10 || ^11",
-    "thecodingmachine/safe": "^1 || ^2"
-  },
-  "require-dev": {
-    "ergebnis/composer-normalize": "^2",
-    "laravel/lumen-framework": "^8 || ^9 || ^10 || ^11",
-    "mll-lab/php-cs-fixer-config": "^5",
-    "nunomaduro/larastan": "^0.7 || ^1 || ^2",
-    "orchestra/testbench": "^6 || ^7 || ^8 || ^9",
-    "phpstan/extension-installer": "^1",
-    "thecodingmachine/phpstan-safe-rule": "^1"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "autoload": {
-    "psr-4": {
-      "MLL\\GraphQLVoyager\\": "src/"
-    }
-  },
-  "config": {
-    "allow-plugins": {
-      "ergebnis/composer-normalize": true,
-      "phpstan/extension-installer": true
+    "name": "mll-lab/laravel-graphql-voyager",
+    "description": "Easily integrate GraphQL Voyager into your Laravel project",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "graphql",
+        "graphql-voyager"
+    ],
+    "authors": [
+        {
+            "name": "Benedikt Franke",
+            "email": "benedikt@franke.tech"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8",
+        "illuminate/console": "^8 || ^9 || ^10 || ^11 || ^12.0",
+        "illuminate/contracts": "^8 || ^9 || ^10 || ^11 || ^12.0",
+        "illuminate/support": "^8 || ^9 || ^10 || ^11 || ^12.0",
+        "thecodingmachine/safe": "^1 || ^2 || ^3.0"
     },
-    "sort-packages": true
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "MLL\\GraphQLVoyager\\GraphQLVoyagerServiceProvider"
-      ]
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2",
+        "laravel/lumen-framework": "^8 || ^9 || ^10 || ^11",
+        "mll-lab/php-cs-fixer-config": "^5",
+        "nunomaduro/larastan": "^0.7 || ^1 || ^2",
+        "orchestra/testbench": "^6 || ^7 || ^8 || ^9 || ^10.0",
+        "phpstan/extension-installer": "^1",
+        "thecodingmachine/phpstan-safe-rule": "^1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "MLL\\GraphQLVoyager\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "phpstan/extension-installer": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MLL\\GraphQLVoyager\\GraphQLVoyagerServiceProvider"
+            ]
+        }
     }
-  }
 }
