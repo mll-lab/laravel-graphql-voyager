@@ -41,10 +41,10 @@
       "ergebnis/composer-normalize": true,
       "phpstan/extension-installer": true
     },
-    "sort-packages": true,
     "audit": {
       "block-insecure": false
-    }
+    },
+    "sort-packages": true
   },
   "extra": {
     "laravel": {
