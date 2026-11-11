@@ -18,7 +18,7 @@
     "illuminate/console": "^8 || ^9 || ^10 || ^11",
     "illuminate/contracts": "^8 || ^9 || ^10 || ^11",
     "illuminate/support": "^8 || ^9 || ^10 || ^11",
-    "thecodingmachine/safe": "^1 || ^2"
+    "thecodingmachine/safe": "^1 || ^2 || ^3"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2",
@@ -40,6 +40,9 @@
     "allow-plugins": {
       "ergebnis/composer-normalize": true,
       "phpstan/extension-installer": true
+    },
+    "audit": {
+      "block-insecure": false
     },
     "sort-packages": true
   },
