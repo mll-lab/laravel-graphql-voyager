@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## v2.5.0
+
 ### Added
 
 - Support Laravel 12 and 13 https://github.com/mll-lab/laravel-graphql-voyager/pull/11
