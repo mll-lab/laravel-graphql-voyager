@@ -4,3 +4,12 @@ parameters:
   - src
   # As long as we support multiple Laravel versions at once, there will be some dead spots
   reportUnmatchedIgnoredErrors: false
+  ignoreErrors:
+  - message: '#Laravel\\Lumen\\Routing\\Router#'
+    path: src/routes.php
+  - message: '#will always evaluate to true#'
+    path: src/routes.php
+  - message: "#Called 'env' outside of the config directory#"
+    path: src/graphql-voyager.php
+  - message: '#expects view-string\|null, string given#'
+    path: src/GraphQLVoyagerController.php
