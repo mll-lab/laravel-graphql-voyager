@@ -1,4 +1,4 @@
-name: "Validate"
+name: Validate
 
 on:
   pull_request:
@@ -7,10 +7,12 @@ on:
       - master
 
 jobs:
-  static-code-analysis:
-    name: Static Code Analysis
+  static-analysis:
+    name: PHPStan on PHP ${{ matrix.php-version }} with Laravel ${{ matrix.laravel-version }} and ${{ matrix.composer.name }} dependencies
     runs-on: ubuntu-latest
+
     strategy:
+      fail-fast: false
       matrix:
         php-version:
           - "7.4"
@@ -19,6 +21,7 @@ jobs:
           - "8.2"
           - "8.3"
           - "8.4"
+          - "8.5"
         laravel-version:
           - "^8"
           - "^9"
@@ -26,21 +29,38 @@ jobs:
           - "^11"
           - "^12"
           - "^13"
+        composer:
+          - name: lowest
+            arg: "--prefer-lowest --prefer-stable"
+          - name: highest
+            arg: "" # No args added as highest is default
         exclude:
+          - php-version: "8.4"
+            laravel-version: "^8"
+          - php-version: "8.5"
+            laravel-version: "^8"
           - php-version: "7.4"
+            laravel-version: "^9"
+          - php-version: "8.3"
+            laravel-version: "^9"
+          - php-version: "8.4"
+            laravel-version: "^9"
+          - php-version: "8.5"
             laravel-version: "^9"
           - php-version: "7.4"
             laravel-version: "^10"
-          - php-version: "7.4"
-            laravel-version: "^11"
           - php-version: "8.0"
             laravel-version: "^10"
+          - php-version: "8.4"
+            laravel-version: "^10"
+          - php-version: "8.5"
+            laravel-version: "^10"
+          - php-version: "7.4"
+            laravel-version: "^11"
           - php-version: "8.0"
             laravel-version: "^11"
           - php-version: "8.1"
             laravel-version: "^11"
-          - php-version: "8.4"
-            laravel-version: "^8"
           - php-version: "7.4"
             laravel-version: "^12"
           - php-version: "8.0"
@@ -55,6 +75,7 @@ jobs:
             laravel-version: "^13"
           - php-version: "8.2"
             laravel-version: "^13"
+
     steps:
       - uses: actions/checkout@v4
 
@@ -72,4 +93,4 @@ jobs:
           --update-with-all-dependencies
           ${{ matrix.composer.arg }}
 
-      - run: vendor/bin/phpstan
+      - run: vendor/bin/phpstan analyse --configuration=phpstan.neon

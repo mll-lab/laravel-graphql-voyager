@@ -1,23 +1,21 @@
 .PHONY: it
-it: vendor fix stan ## Run useful checks before commits
+it: fix stan ## Perform all quality checks
 
 .PHONY: help
 help: ## Displays this list of targets with descriptions
-	@grep -E '^\.?[a-zA-Z0-9_-]+:.*?## .*$$' $(firstword $(MAKEFILE_LIST)) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}'
+	@grep --extended-regexp '^\.?[a-zA-Z0-9_-]+:.*?## .*$$' $(firstword $(MAKEFILE_LIST)) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: setup
 setup: vendor ## Setup the local environment
 
 .PHONY: fix
-fix: ## Fix code style
+fix: ## Fix the codestyle
 	composer normalize
-	vendor/bin/php-cs-fixer fix
+	vendor/bin/php-cs-fixer fix --allow-risky=yes
 
 .PHONY: stan
-stan: ## Runs static analysis
-	vendor/bin/phpstan
+stan: ## Run static analysis with PHPStan
+	vendor/bin/phpstan analyse  --configuration=phpstan.neon
 
-vendor: composer.json ## Install composer dependencies
+vendor: composer.json ## Install dependencies through composer
 	composer update
-	composer validate --strict
-	composer normalize
