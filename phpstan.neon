@@ -7,14 +7,13 @@ parameters:
   checkOctaneCompatibility: true
   # Install https://plugins.jetbrains.com/plugin/7677-awesome-console to make those links clickable
   editorUrl: '%%relFile%%:%%line%%'
-  editorUrlTitle: '%%relFile%%:%%line%%'
   # As long as we support multiple Laravel versions at once, there will be some dead spots
   reportUnmatchedIgnoredErrors: false
   ignoreErrors:
   # Lumen is not installed, it has no release for Laravel 12+
-  - message: '#Laravel\\Lumen#'
+  - '#Laravel\\Lumen#'
   # Allows assert() calls to assist IDE autocompletion
-  - message: '#Call to function assert\(\) with true will always evaluate to true\.#'
+  - '#Call to function assert\(\) with true will always evaluate to true\.#'
   - message: '#Instanceof between .+ will always evaluate to true\.#'
     path: src/routes.php
   # This file actually is a config file
