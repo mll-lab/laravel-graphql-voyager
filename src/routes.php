@@ -1,7 +1,5 @@
 <?php declare(strict_types=1);
 
-/** @var ConfigRepository $config */
-
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 
 $config = app(ConfigRepository::class);
