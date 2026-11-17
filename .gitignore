@@ -7,3 +7,6 @@ vendor
 
 # Generated files
 .php-cs-fixer.cache
+
+# npm
+node_modules
