@@ -40,8 +40,10 @@
       "ergebnis/composer-normalize": true,
       "phpstan/extension-installer": true
     },
-    "audit": {
-      "block-insecure": false
+    "policy": {
+      "advisories": {
+        "block": false
+      }
     },
     "sort-packages": true
   },
